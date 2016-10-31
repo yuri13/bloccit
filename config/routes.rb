@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
+  # #instructs Rails to create post routes for creating updating viewing deleting instances of Post
+  resources :posts
 
-  get 'welcome/about'
+  # #remove welcome index, it has already been declared as the root view
+  get 'about' => 'welcome#about'
 
   root 'welcome#index'
 
