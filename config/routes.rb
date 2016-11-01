@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :questions
   # #instructs Rails to create post routes for creating updating viewing deleting instances of Post
   resources :posts
 
@@ -6,5 +7,4 @@ Rails.application.routes.draw do
   get 'about' => 'welcome#about'
 
   root 'welcome#index'
-
 end
