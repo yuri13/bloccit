@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  # #instructs Rails to create post routes for creating updating viewing deleting instances of Post
-  resources :posts
-
+  resources :topics do
+# #pass resources :posts to the resources :topics block. nests the post routes
+    resources :posts, except: [:index]
+  end
   # #remove welcome index, it has already been declared as the root view
   get 'about' => 'welcome#about'
 
