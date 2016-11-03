@@ -9,6 +9,8 @@ RSpec.describe Topic, type: :model do
 
   it { is_expected.to have_many(:posts) }
 
+  it { should have_many(:sponsored_posts) }
+
 # #confirm that topic responds to appropriate attributes
   describe "attributes" do
     it "has name, description, and public attributes" do
