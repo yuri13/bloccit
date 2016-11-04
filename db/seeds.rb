@@ -32,7 +32,6 @@ topics = Topic.all
  # Create Sponsored Posts
  75.times do
    SponsoredPost.create!(
-     topic: topics.sample,
      title: RandomData.random_sentence,
      body: RandomData.random_paragraph,
      price: RandomData.random_price
@@ -43,5 +42,5 @@ topics = Topic.all
  puts "Seed finished"
  puts "#{Topic.count} topics created"
  puts "#{Post.count} posts created"
- puts "#{SponsoredPost.count} sponsored posts created"
+ puts "#{Sponsoredpost.count} sponsored posts created"
  puts "#{Comment.count} comments created"
