@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   end
 
   resources :users, only: [:new, :create]
-  
+  post 'users/confirm' => 'users#confirm'
+
   # #remove welcome index, it has already been declared as the root view
   get 'about' => 'welcome#about'
 
