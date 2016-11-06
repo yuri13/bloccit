@@ -34,7 +34,7 @@ topics = Topic.all
  # #call times on integer (100), will run block 100 times
  100.times do
    Comment.create!(
- # #sample returns a random element from Post.all
+     user: users.sample,
      post: posts.sample,
      body: RandomData.random_paragraph
    )
