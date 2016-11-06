@@ -1,5 +1,13 @@
 require 'random_data'
 
+moderator = User.create!(
+  name:     'Johnny Damon',
+  email:    'jdamon@aol.com',
+  password: 'password',
+  role:     'moderator'
+)
+
+
 5.times do
   User.create!(
 # #3

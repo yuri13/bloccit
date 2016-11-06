@@ -17,6 +17,6 @@ class User < ApplicationRecord
 # #adds methods to set and authenticate against a BCrypt password
   has_secure_password
 
-  enum role: [:member, :admin]
+  enum role: [:member, :moderator, :admin]
 
 end
