@@ -19,8 +19,19 @@
   </div>
 </div>
 
-<h2>Posts</h2>
-<%= render @user.posts %>
+<% if @user.has_posts? %>
+  <h2>Posts</h2>
+<% else %>
+  <p><%= "#{@user.name} has not submitted any posts yet" %></p>
+<% end %>
+  <%= render @user.posts %>
 
-<h2>Comments</h2>
-<%= render @user.comments %>
+<% if @user.has_comments? %>
+  <h2>Comments</h2>
+<% else %>
+  <p><%= "#{@user.name} has not submitted any comments yet" %></p>
+<% end %>
+  <%= render @user.comments %>
+
+<h2>Favorite Posts</h2>
+<%= render partial: "posts/favorite_post", collection: @user.favorited_posts %>
